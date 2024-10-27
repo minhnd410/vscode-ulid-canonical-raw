@@ -4,10 +4,15 @@ This Visual Studio Code extension provides functionality to view and convert ULI
 
 **Features**
 
+- Generate ULID: Generate a new ULID and copy it to your clipboard.
 - Convert ULID: Convert a raw ULID to its canonical form and vice versa.
 - Hover Information: Display detailed information about ULIDs when hovering over them in plaintext files.
 
 ## Usage
+### Generate ULID
+- Open the command palette (Ctrl+Shift+P or Cmd+Shift+P on macOS).
+- Run the command ULID Canonical-Raw Viewer: Generate ULID.
+
 ### Convert ULID
 - Open the command palette (Ctrl+Shift+P or Cmd+Shift+P on macOS).
 - Run the command ULID Canonical-Raw Viewer: Convert ULID.
