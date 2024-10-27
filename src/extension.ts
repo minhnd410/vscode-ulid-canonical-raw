@@ -3,11 +3,20 @@
 import * as vscode from 'vscode';
 import { Ulid } from  'id128';
 
+// C#
 // var raw = BitConverter.ToString(ulid.ToByteArray()).Replace("-", "")
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+  const newUlid = vscode.commands.registerCommand('ulid-canonical-raw-viewer.newUlidCommand', async () => {
+    const ulid = Ulid.generate();
+    vscode.window.showInformationMessage(`Copied: ${ulid.toCanonical()}`);
+    vscode.env.clipboard.writeText(ulid.toCanonical());
+  });
+
+  context.subscriptions.push(newUlid);
+
   const canonicalRawCommand = vscode.commands.registerCommand('ulid-canonical-raw-viewer.canonicalRawCommand', async () => {
     const ulidRaw = await vscode.window.showInputBox({
       placeHolder: 'Enter a raw ULID (0x...) or a canonical ULID (C...)'

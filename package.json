@@ -2,9 +2,10 @@
   "name": "ulid-canonical-raw-viewer",
   "publisher": "minhnd410",
   "repository": "https://github.com/minhnd410/vscode-ulid-canonical-raw",
-  "displayName": "Ulid Canonical Raw Viewer",
-  "description": "",
-  "version": "0.0.1",
+  "displayName": "Ulid Canonical Raw Utility",
+	"icon": "icon.png",
+  "description": "ULid Utility for Visual Studio Code",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.94.0"
   },
@@ -17,7 +18,11 @@
     "commands": [
       {
         "command": "ulid-canonical-raw-viewer.canonicalRawCommand",
-        "title": "Ulid Canonical Raw"
+        "title": "Ulid Utils: Convert Canonical-Raw"
+      },
+      {
+        "command": "ulid-canonical-raw-viewer.newUlidCommand",
+        "title": "Ulid Utils: New Ulid"
       }
     ]
   },
